@@ -62,7 +62,7 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(77,
 /* галерея */
 .gallery{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px}
 .gallery figure{position:relative;overflow:hidden;border-radius:10px;cursor:pointer;background:#000}
-.gallery figure::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:10px}
+.gallery figure::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:10px;pointer-events:none}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
 .gallery figure:hover img{transform:scale(1.06)}
 .gallery .big{grid-column:span 2;grid-row:span 2}
@@ -350,7 +350,7 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
   const li=lb.querySelector('img'),lc=lb.querySelector('.cnt');
   let idx=0;
   function op(i){idx=(i+imgs.length)%imgs.length;li.src=imgs[idx].src;lc.textContent=(idx+1)+' / '+imgs.length;lb.classList.add('open');}
-  imgs.forEach((im,i)=>im.addEventListener('click',()=>op(i)));
+  document.querySelectorAll('#gal figure').forEach((f,i)=>f.addEventListener('click',()=>op(i)));
   lb.querySelector('.x').onclick=()=>lb.classList.remove('open');
   lb.querySelector('.next').onclick=()=>op(idx+1);
   lb.querySelector('.prev').onclick=()=>op(idx-1);
