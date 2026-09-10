@@ -80,8 +80,9 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(77,
 /* features */
 .venue{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;margin-top:52px;align-items:center}
 @media(max-width:900px){.venue{grid-template-columns:1fr}}
-.venue-svg{background:linear-gradient(180deg,rgba(77,208,214,.08),transparent);border:1px solid var(--line);border-radius:14px;padding:24px;aspect-ratio:1/1;position:relative;overflow:hidden}
-.venue-svg svg{width:100%;height:100%;display:block}
+.venue-photo{position:relative;border-radius:14px;overflow:hidden;min-height:420px;aspect-ratio:4/3}
+.venue-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.venue-photo .frame{position:absolute;inset:14px;border:1px solid rgba(255,255,255,.35);border-radius:8px;pointer-events:none}
 .feat{list-style:none;display:flex;flex-direction:column;gap:2px}
 .feat li{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
 .feat li:last-child{border-bottom:0}
@@ -209,44 +210,7 @@ footer{position:relative;z-index:3;margin-top:60px;padding:90px 24px 60px;text-a
   </div>
 
   <div class="venue">
-    <div class="venue-svg rev">
-      <svg viewBox="0 0 400 400">
-        <defs>
-          <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#092e35"/><stop offset="1" stop-color="#4dd0d6"/></linearGradient>
-        </defs>
-        <!-- потолок -->
-        <rect x="20" y="20" width="360" height="60" fill="#ffffff" opacity=".08"/>
-        <!-- стены с колоннами -->
-        <rect x="20" y="80" width="360" height="200" fill="#0e2a30"/>
-        <rect x="40" y="80" width="10" height="200" fill="#ffffff" opacity=".12"/>
-        <rect x="80" y="80" width="10" height="200" fill="#ffffff" opacity=".12"/>
-        <rect x="310" y="80" width="10" height="200" fill="#ffffff" opacity=".12"/>
-        <rect x="350" y="80" width="10" height="200" fill="#ffffff" opacity=".12"/>
-        <!-- люстры -->
-        <g stroke="#e0c47a" stroke-width="1" fill="#f5deac">
-          <line x1="200" y1="20" x2="200" y2="40"/><circle cx="200" cy="55" r="14"/>
-          <line x1="120" y1="20" x2="120" y2="40"/><circle cx="120" cy="55" r="10"/>
-          <line x1="280" y1="20" x2="280" y2="40"/><circle cx="280" cy="55" r="10"/>
-        </g>
-        <!-- ковёр-дорожка -->
-        <path d="M100 280 L300 280 L340 380 L60 380 Z" fill="url(#fl)"/>
-        <g stroke="#e0c47a" stroke-width="1" fill="none" opacity=".55">
-          <path d="M110 290 L290 290"/><path d="M105 300 L295 300"/>
-          <path d="M100 320 Q200 340 300 320"/>
-          <rect x="130" y="330" width="140" height="40" rx="4"/>
-        </g>
-        <!-- стулья по бокам -->
-        <g fill="#f5deac" opacity=".9">
-          <rect x="70" y="290" width="16" height="20" rx="2"/><rect x="90" y="290" width="16" height="20" rx="2"/><rect x="110" y="290" width="16" height="20" rx="2"/>
-          <rect x="274" y="290" width="16" height="20" rx="2"/><rect x="294" y="290" width="16" height="20" rx="2"/><rect x="314" y="290" width="16" height="20" rx="2"/>
-        </g>
-        <!-- вход/окна -->
-        <rect x="180" y="120" width="40" height="80" fill="#083038" stroke="#e0c47a" stroke-width="1"/>
-        <path d="M180 160 Q200 130 220 160" fill="none" stroke="#e0c47a" stroke-width="1"/>
-        <!-- рамка -->
-        <rect x="10" y="10" width="380" height="380" fill="none" stroke="#e0c47a" stroke-width="1" opacity=".4"/>
-      </svg>
-    </div>
+    <div class="venue-photo rev"><img src="img/2.jpg" alt="Зал"><span class="frame"></span></div>
     <ul class="feat rev">
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg><div><b>Банкетный зал на 200 гостей</b><span>Просторный зал с высокими потолками, хрустальными люстрами и лазурной палитрой</span></div></li>
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 9h16M4 15h16M8 4l-4 8 4 8M16 4l4 8-4 8"/></svg><div><b>Своя халяль-кухня</b><span>Кухня и бригада поваров — наши, меню полностью без свинины. Ресторан даёт зал и обслуживание.</span></div></li>
