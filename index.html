@@ -39,6 +39,13 @@ h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.8rem
 .date{font-family:'Oswald',sans-serif;font-weight:300;font-size:.7rem;letter-spacing:.14em;color:var(--muted)}
 footer{margin-top:80px;padding-top:40px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem;line-height:2}
 footer a{color:var(--accent-b)}
+.search{max-width:520px;margin:34px auto 0;position:relative}
+.search input{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:60px;padding:16px 22px 16px 50px;color:var(--fg);font-family:'Montserrat',sans-serif;font-size:.95rem;outline:none;transition:.3s}
+.search input::placeholder{color:var(--muted);font-weight:300}
+.search input:focus{border-color:var(--accent);background:rgba(255,255,255,.07)}
+.search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);pointer-events:none}
+.empty{text-align:center;color:var(--muted);font-style:italic;padding:30px 0;display:none}
+.group.hidden,.card.hidden{display:none}
 @media(max-width:520px){header{padding:44px 0 20px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -49,8 +56,13 @@ footer a{color:var(--accent-b)}
   <h1>Актуальные предложения</h1>
   <div class="sub">Свадебное агентство · НАВСЕГДА</div>
   <div class="line"></div>
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="q" type="search" placeholder="Найти пару, площадку или дату…" autocomplete="off" spellcheck="false">
+  </div>
 </header>
-<div class="groups">
+<div class="empty" id="empty">По запросу ничего не найдено</div>
+<div class="groups" id="groups">
 
 <div class="group">
   <div class="gt">Илья и Кристина · 22.07.2027 · 4 варианта</div>
@@ -73,7 +85,7 @@ footer a{color:var(--accent-b)}
 <div class="group">
   <div class="gt">Юбилей</div>
   <div class="grid">
-    <a class="card" href="dmitriy-bday/"><div class="thumb"><span class="tag">Виски &amp; сигары</span><img src="dmitriy-bday/img/1.jpg" alt=""></div><div class="body"><h3>Дмитрий · 45 лет</h3><div class="venue">Exit Loft · крыша в центре</div><div class="row"><div class="date">24.10.2026 · 20–30 гостей</div><div class="total"><small>Итого</small>610 950 ₽</div></div></div></a>
+    <a class="card" href="dmitriy-bday/"><div class="thumb"><span class="tag">Виски &amp; сигары</span><img src="dmitriy-bday/img/1.jpg" alt=""></div><div class="body"><h3>Дмитрий · 45 лет</h3><div class="venue">Exit Loft · крыша в центре</div><div class="row"><div class="date">24.10.2026 · 20–30 гостей</div><div class="total"><small>Итого</small>678 155 ₽</div></div></div></a>
   </div>
 </div>
 
@@ -85,6 +97,24 @@ footer a{color:var(--accent-b)}
 </div>
 <script>
 fetch('_assets/logo-navsegda.svg').then(r=>r.text()).then(s=>{document.getElementById('logo').innerHTML=s.replace(/fill="#FFE7C6"/g,'fill="currentColor"');});
+(function(){
+  const q=document.getElementById('q'), groups=document.getElementById('groups'), empty=document.getElementById('empty');
+  const cards=[...groups.querySelectorAll('.card')];
+  const gs=[...groups.querySelectorAll('.group')];
+  const norm=s=>s.toLowerCase().replace(/ё/g,'е').replace(/[«»„"]/g,'').replace(/\s+/g,' ').trim();
+  cards.forEach(c=>{c.dataset.txt=norm(c.textContent+' '+(c.querySelector('.gt')?.textContent||''));});
+  gs.forEach(g=>{const gt=norm(g.querySelector('.gt')?.textContent||'');g.querySelectorAll('.card').forEach(c=>c.dataset.txt+=' '+gt)});
+  function filter(){
+    const v=norm(q.value);
+    if(!v){cards.forEach(c=>c.classList.remove('hidden'));gs.forEach(g=>g.classList.remove('hidden'));empty.style.display='none';return;}
+    const tokens=v.split(' ').filter(Boolean);
+    let any=false;
+    cards.forEach(c=>{const ok=tokens.every(t=>c.dataset.txt.includes(t));c.classList.toggle('hidden',!ok);if(ok)any=true;});
+    gs.forEach(g=>{const has=[...g.querySelectorAll('.card')].some(c=>!c.classList.contains('hidden'));g.classList.toggle('hidden',!has);});
+    empty.style.display=any?'none':'block';
+  }
+  q.addEventListener('input',filter);
+})();
 </script>
 </body>
 </html>
