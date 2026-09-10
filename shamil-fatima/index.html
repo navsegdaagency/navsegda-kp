@@ -60,11 +60,15 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(77,
 @media(max-width:900px){.trio{grid-template-columns:1fr}}
 
 /* галерея */
-.gallery{margin-top:52px;display:grid;gap:12px}
-.gallery figure{position:relative;overflow:hidden;border-radius:14px;cursor:pointer;background:#000;aspect-ratio:16/9}
-.gallery figure::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:14px}
+.gallery{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px}
+.gallery figure{position:relative;overflow:hidden;border-radius:10px;cursor:pointer;background:#000}
+.gallery figure::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:10px}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
 .gallery figure:hover img{transform:scale(1.06)}
+.gallery .big{grid-column:span 2;grid-row:span 2}
+.gallery .wide{grid-column:span 2}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gallery .big{grid-column:span 2;grid-row:span 2}}
+@media(max-width:420px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:120px}}
 .lb{position:fixed;inset:0;z-index:100;background:rgba(3,9,11,.96);display:none;align-items:center;justify-content:center}
 .lb.open{display:flex}
 .lb img{max-width:92vw;max-height:86vh;border-radius:6px}
@@ -167,17 +171,6 @@ footer{position:relative;z-index:3;margin-top:60px;padding:90px 24px 60px;text-a
     </svg>
   </div>
 
-  <!-- Восточная арка -->
-  <div class="arch">
-    <svg viewBox="0 0 800 500">
-      <defs>
-        <linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(224,196,122,.4)"/><stop offset="1" stop-color="rgba(224,196,122,0)"/></linearGradient>
-      </defs>
-      <path d="M100 500 L100 250 Q100 80 400 40 Q700 80 700 250 L700 500" fill="none" stroke="url(#a1)" stroke-width="1.4"/>
-      <path d="M140 500 L140 260 Q140 110 400 76 Q660 110 660 260 L660 500" fill="none" stroke="rgba(224,196,122,.28)" stroke-width="1"/>
-      <path d="M400 40 L406 60 L420 62 L410 74 L414 92 L400 82 L386 92 L390 74 L380 62 L394 60 Z" fill="rgba(224,196,122,.5)"/>
-    </svg>
-  </div>
 
   <div class="hero-inner">
     <div class="hero-logo" id="hl"></div>
@@ -196,7 +189,7 @@ footer{position:relative;z-index:3;margin-top:60px;padding:90px 24px 60px;text-a
   <p class="lead rev">Банкетный зал в Текстильщиках — хрустальные люстры, лазурный ковёр, белые колонны. Мы привозим свою халяль-кухню, свою технику и всю команду. Гостям — атмосфера и восточная торжественность, вам — контроль над каждой деталью меню и вечера.</p>
   <div class="trio">
     <div class="tcard rev"><div class="rn">Утро–день</div><h3>Встреча гостей</h3><p>Приветственный чай и лёгкие закуски, welcome-зона с восточными акцентами, фотозона у хрустальной арки.</p></div>
-    <div class="tcard rev"><div class="rn">Церемония</div><h3>Никах и регистрация</h3><p>Официальная выездная регистрация в зале, тёплое слово двуязычного ведущего.</p></div>
+    <div class="tcard rev"><div class="rn">Церемония</div><h3>Выездная регистрация</h3><p>Официальная выездная регистрация в зале, тёплое слово двуязычного ведущего.</p></div>
     <div class="tcard rev"><div class="rn">Вечер</div><h3>Пир и танцы</h3><p>Банкет под хрусталём, живая музыка и лезгинка, кульминация — салют и холодные фонтаны.</p></div>
   </div>
 </div></section>
@@ -207,7 +200,12 @@ footer{position:relative;z-index:3;margin-top:60px;padding:90px 24px 60px;text-a
   <svg class="sdiv" viewBox="0 0 80 12"><path d="M0 6 H30 M50 6 H80" stroke="var(--gold)" stroke-width="1"/><path d="M40 1 L45 6 L40 11 L35 6 Z" fill="var(--gold)"/></svg>
 
   <div class="gallery rev" id="gal">
-    <figure><img src="img/1.jpg" alt="Банкетный зал"></figure>
+    <figure class="big"><img src="img/1.jpg" alt="Банкетный зал"></figure>
+    <figure><img src="img/2.jpg" alt="Зал"></figure>
+    <figure><img src="img/3.jpg" alt="Зал"></figure>
+    <figure class="wide"><img src="img/4.jpg" alt="Зал"></figure>
+    <figure><img src="img/5.jpg" alt="Зал"></figure>
+    <figure><img src="img/6.jpg" alt="Зал"></figure>
   </div>
 
   <div class="venue">
@@ -266,7 +264,7 @@ footer{position:relative;z-index:3;margin-top:60px;padding:90px 24px 60px;text-a
   <svg class="sdiv" viewBox="0 0 80 12"><path d="M0 6 H30 M50 6 H80" stroke="var(--gold)" stroke-width="1"/><path d="M40 1 L45 6 L40 11 L35 6 Z" fill="var(--gold)"/></svg>
   <div class="timeline">
     <div class="tl rev"><div class="t">15:00 · встреча</div><h4>Welcome-зона</h4><p>Гости съезжаются, приветственный чай и лёгкие закуски, фотозона у арки.</p></div>
-    <div class="tl rev"><div class="t">16:30 · церемония</div><h4>Никах и выездная регистрация</h4><p>Двуязычный ведущий, тёплое слово, тосты, первые фото.</p></div>
+    <div class="tl rev"><div class="t">16:30 · церемония</div><h4>Выездная регистрация</h4><p>Двуязычный ведущий, тёплое слово, тосты, первые фото.</p></div>
     <div class="tl rev"><div class="t">18:00 · банкет</div><h4>Пир под хрусталём</h4><p>Меню халяль от ресторана, обслуживание — от площадки, наша программа поверх.</p></div>
     <div class="tl rev"><div class="t">21:00 · программа</div><h4>Танцы, лезгинка, живая музыка</h4><p>Диджей + звукорежиссёр, национальные акценты, поздравления.</p></div>
     <div class="tl rev"><div class="t">23:00 · финал</div><h4>Салют и холодные фонтаны</h4><p>Эффектная кульминация вечера.</p></div>
