@@ -112,6 +112,22 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
 @media(max-width:768px){section{padding:80px 0}.est thead th:nth-child(3),.ri .cl{display:none}.rtot td{font-size:1.4rem}}
 @media(max-width:420px){.wrap{padding:0 20px}.wordmark{letter-spacing:.22em;padding-left:.22em}.hero-inner{padding-top:150px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* раскрывающаяся внутренняя смета */
+.ri.exp{cursor:pointer;user-select:none}
+.ri.exp .chev{display:inline-block;transition:transform .3s;color:var(--accent);margin-left:6px;font-size:.9em}
+.ri.exp.open .chev{transform:rotate(180deg)}
+.sub-wrap>td{padding:0!important;border:0!important;background:transparent!important}
+.sub-inner{max-height:0;overflow:hidden;transition:max-height .5s ease;background:rgba(0,0,0,.03);border-radius:0}
+.sub-wrap.open .sub-inner{max-height:900px}
+.sub-inner>.sub-title{font-family:'Oswald',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);padding:16px 24px 8px}
+.sub-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.sub-table td{padding:9px 24px;border-bottom:1px solid var(--line);vertical-align:top}
+.sub-table td:first-child{width:auto}
+.sub-table td.c{color:var(--muted);font-size:.78rem;white-space:nowrap;text-align:right;width:1%}
+.sub-table td.p{text-align:right;white-space:nowrap;font-weight:500;color:var(--fg);width:1%}
+.sub-table .sub-sec td{font-family:'Oswald',sans-serif;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);padding-top:14px}
+.sub-table .sub-sub td{font-family:'Oswald',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:rgba(0,0,0,.02)}
+.sub-table .sub-tot td{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--fg);background:rgba(0,0,0,.05);padding:14px 24px}
 </style>
 </head>
 <body>
@@ -178,20 +194,48 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
       <tr class="rsub"><td colspan="3">Итого программа</td><td class="pr">129 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Техника</td></tr>
-      <tr class="ri"><td class="n">4</td><td class="nm">Световое оборудование</td><td class="cl">комплект</td><td class="pr">35 000 ₽</td></tr>
-      <tr class="ri"><td class="n">5</td><td class="nm">Звуковое оборудование</td><td class="cl">комплект</td><td class="pr">40 000 ₽</td></tr>
-      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">75 000 ₽</td></tr>
+      <tr class="ri"><td class="n">4</td><td class="nm">Световое оборудование</td><td class="cl">комплект</td><td class="pr">45 000 ₽</td></tr>
+      <tr class="ri"><td class="n">5</td><td class="nm">Звуковое оборудование</td><td class="cl">комплект</td><td class="pr">55 000 ₽</td></tr>
+      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">100 000 ₽</td></tr>
+
+      <tr class="rs"><td colspan="4">Фотозона</td></tr>
+      <tr class="ri exp" data-target="fotozone"><td class="n">6</td><td class="nm">Фотозона (декор под ключ) <span class="chev">▾</span></td><td class="cl">под ключ</td><td class="pr">147 000 ₽</td></tr>
+      <tr class="sub-wrap" id="fotozone"><td colspan="4">
+        <div class="sub-inner">
+          <div class="sub-title">Внутренняя разбивка фотозоны</div>
+          <table class="sub-table">
+            <tbody>
+              <tr class="sub-sec"><td colspan="4">Материалы и декор</td></tr>
+              <tr><td>Панели из пенокартона на каркасе</td><td class="c">1 × 26 000</td><td class="p">26 000 ₽</td></tr>
+              <tr><td>Наклейки на пенокартон с накаткой (заглавные буквы)</td><td class="c">1 × 15 000</td><td class="p">15 000 ₽</td></tr>
+              <tr><td>Насыпные свечи</td><td class="c">10 × 300</td><td class="p">3 000 ₽</td></tr>
+              <tr><td>2 круглые колонны, закатанные плёнкой оракал</td><td class="c">2 × 8 000</td><td class="p">16 000 ₽</td></tr>
+              <tr><td>Гирлянда из шаров разных размеров (глянец)</td><td class="c">1 × 30 000</td><td class="p">30 000 ₽</td></tr>
+              <tr><td>Неоновая подсветка по краям фотозоны</td><td class="c">1 × 9 000</td><td class="p">9 000 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого материалы</td><td class="p">99 000 ₽</td></tr>
+              <tr class="sub-sec"><td colspan="4">Работа и логистика</td></tr>
+              <tr><td>Аэродизайнер</td><td class="c">1 чел.</td><td class="p">16 000 ₽</td></tr>
+              <tr><td>Монтажник</td><td class="c">1 чел.</td><td class="p">16 000 ₽</td></tr>
+              <tr><td>Хэлпер (монтаж + демонтаж)</td><td class="c">1 чел.</td><td class="p">5 000 ₽</td></tr>
+              <tr><td>Логистические услуги</td><td class="c">комплект</td><td class="p">11 000 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого работа и логистика</td><td class="p">48 000 ₽</td></tr>
+              <tr class="sub-tot"><td colspan="2">ВСЕГО фотозона</td><td class="p">147 000 ₽</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </td></tr>
+      <tr class="rsub"><td colspan="3">Итого фотозона</td><td class="pr">147 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Бар и активации</td></tr>
-      <tr class="ri"><td class="n">6</td><td class="nm">Бар с авторскими коктейлями</td><td class="cl">300 × 750</td><td class="pr">225 000 ₽</td></tr>
-      <tr class="ri"><td class="n">7</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
+      <tr class="ri"><td class="n">7</td><td class="nm">Бар с авторскими коктейлями</td><td class="cl">300 × 750</td><td class="pr">225 000 ₽</td></tr>
+      <tr class="ri"><td class="n">8</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого бар и активации</td><td class="pr">242 500 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Организация</td></tr>
-      <tr class="ri"><td class="n">8</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
+      <tr class="ri"><td class="n">9</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого организация</td><td class="pr">40 000 ₽</td></tr>
 
-      <tr class="rtot"><td colspan="3">ИТОГО</td><td class="pr">486 500 ₽</td></tr>
+      <tr class="rtot"><td colspan="3">ИТОГО</td><td class="pr">658 500 ₽</td></tr>
     </tbody>
   </table></div>
   <p class="note">Смета покрывает весь вечер под ключ. Ниже — опции, которые естественно ложатся на эстетику студии и усиливают вечер.</p>
@@ -249,6 +293,15 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
   let sx=0;li.addEventListener('touchstart',e=>{sx=e.changedTouches[0].clientX},{passive:true});
   li.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)op(idx+(d<0?1:-1));},{passive:true});
 })();
+</script>
+<script>
+document.querySelectorAll('.ri.exp').forEach(tr=>{
+  tr.addEventListener('click',()=>{
+    const id=tr.dataset.target;const box=document.getElementById(id);
+    if(!box)return;
+    tr.classList.toggle('open');box.classList.toggle('open');
+  });
+});
 </script>
 </body>
 </html>
