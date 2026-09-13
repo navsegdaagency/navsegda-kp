@@ -112,6 +112,16 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
 @media(max-width:768px){section{padding:80px 0}.est thead th:nth-child(3),.ri .cl{display:none}.rtot td{font-size:1.4rem}}
 @media(max-width:420px){.wrap{padding:0 20px}.wordmark{letter-spacing:.22em;padding-left:.22em}.hero-inner{padding-top:150px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* тайминг вечера */
+.tl-list{max-width:760px;margin:52px auto 0;position:relative;padding-left:36px}
+.tl-list::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--accent2));border-radius:2px;opacity:.6}
+.tl-row{position:relative;padding:0 0 28px 22px}
+.tl-row::before{content:"";position:absolute;left:-32px;top:3px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(160,120,60,.1)}
+.tl-row.pause::before{border-color:var(--muted)}
+.tl-row .t{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.24em;color:var(--accent);text-transform:uppercase}
+.tl-row.pause .t{color:var(--muted)}
+.tl-row h4{font-size:1.28rem;color:var(--fg);margin:3px 0 4px;font-family:'Cormorant Garamond',serif;font-weight:500}
+.tl-row p{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.55}
 /* раскрывающаяся внутренняя смета */
 .ri.exp{cursor:pointer;user-select:none}
 .ri.exp .chev{display:inline-block;transition:transform .3s;color:var(--accent);margin-left:6px;font-size:.9em}
@@ -179,6 +189,23 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
   </div>
 </div></section>
 
+<!-- TIMING -->
+<section><div class="wrap">
+  <div class="eyebrow rev">Программа вечера</div>
+  <h2 class="stitle rev">Тайминг · 18:00 — 22:00</h2>
+  <div class="tl-list">
+    <div class="tl-row rev"><div class="t">18:00 — 18:40 · Welcome</div><h4>Встреча гостей</h4><p>Гости приезжают, знакомятся с пространством, лёгкие закуски, welcome-музыка от диджея, Polaroid и альбом с пожеланиями.</p></div>
+    <div class="tl-row rev"><div class="t">18:40 — 18:50 · Открытие</div><h4>Приветственное слово Арарата</h4><p>Хозяин студии открывает вечер, задаёт настрой и представляет команду.</p></div>
+    <div class="tl-row rev"><div class="t">18:50 — 19:15 · Блок 1</div><h4>Интерактив «Знакомство через образ»</h4><p>Ведущий разбивает гостей на пары и мини-команды через beauty-квиз о студии, ароматах и стиле — быстро включает и знакомит всех между собой.</p></div>
+    <div class="tl-row rev"><div class="t">19:15 — 19:50 · 35 мин</div><h4>Кавер-группа · сет 1</h4><p>Живой звук: гитара, бас, барабаны, вокал. Атмосферный сет под уютную часть вечера.</p></div>
+    <div class="tl-row pause rev"><div class="t">19:50 — 20:00 · перерыв</div><h4>Пауза 10 минут</h4><p>Диджей заполняет паузу, гости общаются, обновляют бокалы.</p></div>
+    <div class="tl-row rev"><div class="t">20:00 — 20:30 · Блок 2</div><h4>Ведущий: тосты и активность</h4><p>Тёплые слова, поздравления, интерактивная активность с гостями, обыгрыш фотозоны.</p></div>
+    <div class="tl-row rev"><div class="t">20:30 — 21:05 · 35 мин</div><h4>Кавер-группа · сет 2</h4><p>Энергичный сет: любимые треки, танцевальные хиты, разгон вечера.</p></div>
+    <div class="tl-row pause rev"><div class="t">21:05 — 21:15 · перерыв</div><h4>Пауза 10 минут</h4><p>Короткая передышка, диджей поддерживает ритм.</p></div>
+    <div class="tl-row rev"><div class="t">21:15 — 22:00 · Финал</div><h4>Диджей-сет</h4><p>Клубная часть вечера — плотный сет диджея до финала.</p></div>
+  </div>
+</div></section>
+
 <!-- ESTIMATE -->
 <section><div class="wrap">
   <div class="eyebrow rev">Смета</div>
@@ -196,10 +223,11 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
       <tr class="rs"><td colspan="4">Техника</td></tr>
       <tr class="ri"><td class="n">4</td><td class="nm">Световое оборудование</td><td class="cl">комплект</td><td class="pr">35 000 ₽</td></tr>
       <tr class="ri"><td class="n">5</td><td class="nm">Звуковое оборудование</td><td class="cl">комплект</td><td class="pr">40 000 ₽</td></tr>
-      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">75 000 ₽</td></tr>
+      <tr class="ri"><td class="n">6</td><td class="nm">Технический специалист по звуку</td><td class="cl">1 чел.</td><td class="pr">17 500 ₽</td></tr>
+      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">92 500 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Фотозона</td></tr>
-      <tr class="ri exp" data-target="fotozone"><td class="n">6</td><td class="nm">Фотозона (декор под ключ) <span class="chev">▾</span></td><td class="cl">под ключ</td><td class="pr">147 000 ₽</td></tr>
+      <tr class="ri exp" data-target="fotozone"><td class="n">7</td><td class="nm">Фотозона (декор под ключ) <span class="chev">▾</span></td><td class="cl">под ключ</td><td class="pr">147 000 ₽</td></tr>
       <tr class="sub-wrap" id="fotozone"><td colspan="4">
         <div class="sub-inner">
           <div class="sub-title">Внутренняя разбивка фотозоны</div>
@@ -227,14 +255,14 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
       <tr class="rsub"><td colspan="3">Итого фотозона</td><td class="pr">147 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Активации</td></tr>
-      <tr class="ri"><td class="n">7</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
+      <tr class="ri"><td class="n">8</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого активации</td><td class="pr">17 500 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Организация</td></tr>
-      <tr class="ri"><td class="n">8</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
+      <tr class="ri"><td class="n">9</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого организация</td><td class="pr">40 000 ₽</td></tr>
 
-      <tr class="rtot"><td colspan="3">ИТОГО</td><td class="pr">408 500 ₽</td></tr>
+      <tr class="rtot"><td colspan="3">ИТОГО</td><td class="pr">426 000 ₽</td></tr>
     </tbody>
   </table></div>
   <p class="note">Смета покрывает весь вечер под ключ. Ниже — опции, которые естественно ложатся на эстетику студии и усиливают вечер.</p>
