@@ -112,6 +112,11 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
 @media(max-width:768px){section{padding:80px 0}.est thead th:nth-child(3),.ri .cl{display:none}.rtot td{font-size:1.4rem}}
 @media(max-width:420px){.wrap{padding:0 20px}.wordmark{letter-spacing:.22em;padding-left:.22em}.hero-inner{padding-top:150px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* нал/безнал */
+.pay-note{margin-top:24px;padding:20px 26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,rgba(160,120,60,.08),transparent);display:flex;gap:32px;flex-wrap:wrap;align-items:center;font-size:.94rem}
+.pay-note b{color:var(--accent);margin-right:8px}
+.pay-note span{color:var(--muted);font-size:.86em}
+@media(max-width:600px){.pay-note{flex-direction:column;align-items:flex-start;gap:10px}}
 /* тайминг вечера */
 .tl-list{max-width:760px;margin:52px auto 0;position:relative;padding-left:36px}
 .tl-list::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--accent2));border-radius:2px;opacity:.6}
@@ -154,8 +159,8 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
   <div class="hero-inner">
     <div class="hero-marker">Коммерческое предложение</div>
     <div class="wordmark">AYVAZZOVSKY<small>studio</small></div>
-    <div class="hero-tag">Тёплый вечер в интерьере студии —<br>с живой музыкой, светом и авторским баром.</div>
-    <div class="hero-meta">4 часа программы · до 100 гостей · под ключ</div>
+    <div class="hero-tag">Тёплый вечер в интерьере студии —<br>ведущий, диджей и фуршет-шведский стол.</div>
+    <div class="hero-meta">4 часа программы · 150 гостей · под ключ</div>
   </div>
 </header>
 
@@ -164,10 +169,10 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
   <div class="eyebrow rev">Концепция</div>
   <h2 class="stitle rev">Вечер в тёплой палитре студии</h2>
   <span class="sdiv"></span>
-  <p class="lead rev">Мы сохраняем язык интерьера AYVAZZOVSKY — светлый дуб, латунь, кремовые бархаты и арки — и настраиваем на этой сцене живой вечер: авторские коктейли за баром, набор для Polaroid со стеной пожеланий, ведущий и диджей, живой сет кавер-группы. Ничего лишнего, только атмосфера, свет и звук.</p>
+  <p class="lead rev">Мы сохраняем язык интерьера AYVAZZOVSKY — светлый дуб, латунь, кремовые бархаты и арки — и настраиваем на этой сцене живой вечер: фуршет-шведский стол на 150 гостей, набор для Polaroid со стеной пожеланий, ведущий с интерактивами и диджей. Ничего лишнего — только атмосфера, свет и звук.</p>
   <div class="trio">
     <div class="tcard rev"><div class="rn">01 · Welcome</div><h3>Свет и коктейль</h3><p>Гости приезжают в тёплый свет, встречает бармен с авторской картой на 300 позиций. Polaroid и альбом пожеланий на входе.</p></div>
-    <div class="tcard rev"><div class="rn">02 · Программа</div><h3>Ведущий и живой звук</h3><p>4 часа с ведущим — конкурсы и тосты, диджей поддерживает атмосферу, кавер-группа делает два больших сета.</p></div>
+    <div class="tcard rev"><div class="rn">02 · Программа</div><h3>Ведущий и диджей</h3><p>4 часа с ведущим — интерактивы, тосты и активности. Диджей ведёт вечер плотным сетом, плазма 55″ для контента и фото.</p></div>
     <div class="tcard rev"><div class="rn">03 · Финал</div><h3>Танцы и снимки</h3><p>Постепенный переход в танцевальную часть, Polaroid остаётся до конца — гости уходят с личным кадром на память.</p></div>
   </div>
 </div></section>
@@ -194,15 +199,12 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
   <div class="eyebrow rev">Программа вечера</div>
   <h2 class="stitle rev">Тайминг · 18:00 — 22:00</h2>
   <div class="tl-list">
-    <div class="tl-row rev"><div class="t">18:00 — 18:40 · Welcome</div><h4>Встреча гостей</h4><p>Гости приезжают, знакомятся с пространством, лёгкие закуски, welcome-музыка от диджея, Polaroid и альбом с пожеланиями.</p></div>
+    <div class="tl-row rev"><div class="t">18:00 — 18:40 · Welcome</div><h4>Встреча гостей</h4><p>Гости приезжают, знакомятся с пространством, welcome-музыка от диджея, Polaroid и альбом с пожеланиями, фуршет открыт.</p></div>
     <div class="tl-row rev"><div class="t">18:40 — 18:50 · Открытие</div><h4>Приветственное слово Арарата</h4><p>Хозяин студии открывает вечер, задаёт настрой и представляет команду.</p></div>
-    <div class="tl-row rev"><div class="t">18:50 — 19:15 · Блок 1</div><h4>Интерактив «Знакомство через образ»</h4><p>Ведущий разбивает гостей на пары и мини-команды через beauty-квиз о студии, ароматах и стиле — быстро включает и знакомит всех между собой.</p></div>
-    <div class="tl-row rev"><div class="t">19:15 — 19:50 · 35 мин</div><h4>Кавер-группа · сет 1</h4><p>Живой звук: гитара, бас, барабаны, вокал. Атмосферный сет под уютную часть вечера.</p></div>
-    <div class="tl-row pause rev"><div class="t">19:50 — 20:00 · перерыв</div><h4>Пауза 10 минут</h4><p>Диджей заполняет паузу, гости общаются, обновляют бокалы.</p></div>
-    <div class="tl-row rev"><div class="t">20:00 — 20:30 · Блок 2</div><h4>Ведущий: тосты и активность</h4><p>Тёплые слова, поздравления, интерактивная активность с гостями, обыгрыш фотозоны.</p></div>
-    <div class="tl-row rev"><div class="t">20:30 — 21:05 · 35 мин</div><h4>Кавер-группа · сет 2</h4><p>Энергичный сет: любимые треки, танцевальные хиты, разгон вечера.</p></div>
-    <div class="tl-row pause rev"><div class="t">21:05 — 21:15 · перерыв</div><h4>Пауза 10 минут</h4><p>Короткая передышка, диджей поддерживает ритм.</p></div>
-    <div class="tl-row rev"><div class="t">21:15 — 22:00 · Финал</div><h4>Диджей-сет</h4><p>Клубная часть вечера — плотный сет диджея до финала.</p></div>
+    <div class="tl-row rev"><div class="t">18:50 — 19:20 · Блок 1</div><h4>Интерактив «Знакомство через образ»</h4><p>Ведущий разбивает гостей на пары и мини-команды через beauty-квиз о студии, ароматах и стиле — быстро включает и знакомит всех между собой.</p></div>
+    <div class="tl-row rev"><div class="t">19:20 — 20:20 · Диджей + фуршет</div><h4>Основной сет диджея</h4><p>Фоновая часть вечера — плотный сет диджея под фуршет. Гости общаются, пробуют меню, крутится контент на плазме 55″.</p></div>
+    <div class="tl-row rev"><div class="t">20:20 — 20:50 · Блок 2</div><h4>Ведущий: тосты и активность</h4><p>Тёплые слова, поздравления, интерактивная активность с гостями, обыгрыш фотозоны, розыгрыш подарков.</p></div>
+    <div class="tl-row rev"><div class="t">20:50 — 22:00 · Финал</div><h4>Танцевальный сет диджея</h4><p>Клубная часть вечера — энергичный сет до финала, плотный ритм и танцпол.</p></div>
   </div>
 </div></section>
 
@@ -217,17 +219,16 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
       <tr class="rs"><td colspan="4">Программа</td></tr>
       <tr class="ri"><td class="n">1</td><td class="nm">Ведущий с программой</td><td class="cl">4 часа</td><td class="pr">40 000 ₽</td></tr>
       <tr class="ri"><td class="n">2</td><td class="nm">Диджей</td><td class="cl">6 000 × 4 ч</td><td class="pr">24 000 ₽</td></tr>
-      <tr class="ri"><td class="n">3</td><td class="nm">Кавер-группа (гитара, бас, барабаны, вокал + звуковик)</td><td class="cl">коллектив</td><td class="pr">65 000 ₽</td></tr>
-      <tr class="rsub"><td colspan="3">Итого программа</td><td class="pr">129 000 ₽</td></tr>
+      <tr class="rsub"><td colspan="3">Итого программа</td><td class="pr">64 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Техника</td></tr>
-      <tr class="ri"><td class="n">4</td><td class="nm">Световое оборудование</td><td class="cl">комплект</td><td class="pr">35 000 ₽</td></tr>
-      <tr class="ri"><td class="n">5</td><td class="nm">Звуковое оборудование</td><td class="cl">комплект</td><td class="pr">40 000 ₽</td></tr>
-      <tr class="ri"><td class="n">6</td><td class="nm">Технический специалист по звуку</td><td class="cl">1 чел.</td><td class="pr">17 500 ₽</td></tr>
-      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">92 500 ₽</td></tr>
+      <tr class="ri"><td class="n">3</td><td class="nm">Звуковое оборудование</td><td class="cl">комплект</td><td class="pr">40 000 ₽</td></tr>
+      <tr class="ri"><td class="n">4</td><td class="nm">Технический специалист по звуку</td><td class="cl">1 чел.</td><td class="pr">17 500 ₽</td></tr>
+      <tr class="ri"><td class="n">5</td><td class="nm">Экран-плазма 55″</td><td class="cl">комплект</td><td class="pr">10 000 ₽</td></tr>
+      <tr class="rsub"><td colspan="3">Итого техника</td><td class="pr">67 500 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Фотозона</td></tr>
-      <tr class="ri exp" data-target="fotozone"><td class="n">7</td><td class="nm">Фотозона (декор под ключ) <span class="chev">▾</span></td><td class="cl">под ключ</td><td class="pr">147 000 ₽</td></tr>
+      <tr class="ri exp" data-target="fotozone"><td class="n">6</td><td class="nm">Фотозона (декор под ключ) <span class="chev">▾</span></td><td class="cl">под ключ</td><td class="pr">147 000 ₽</td></tr>
       <tr class="sub-wrap" id="fotozone"><td colspan="4">
         <div class="sub-inner">
           <div class="sub-title">Внутренняя разбивка фотозоны</div>
@@ -255,64 +256,67 @@ footer{position:relative;z-index:3;margin-top:60px;padding:100px 24px 60px;text-
       <tr class="rsub"><td colspan="3">Итого фотозона</td><td class="pr">147 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Питание · фуршет на 150 гостей</td></tr>
-      <tr class="ri exp" data-target="menu"><td class="n">8</td><td class="nm">Фуршет (закуски, канапе, салаты, горячие) <span class="chev">▾</span></td><td class="cl">150 гостей · ~283 г/чел</td><td class="pr">125 000 ₽</td></tr>
+      <tr class="ri exp" data-target="menu"><td class="n">7</td><td class="nm">Фуршет (закуски, канапе, салаты, горячие) <span class="chev">▾</span></td><td class="cl">150 гостей · ~283 г/чел</td><td class="pr">153 000 ₽</td></tr>
       <tr class="sub-wrap" id="menu"><td colspan="4">
         <div class="sub-inner">
-          <div class="sub-title">Меню кейтеринга · раскрытие</div>
+          <div class="sub-title">Меню · раскладка по позициям</div>
           <table class="sub-table">
             <tbody>
               <tr class="sub-sec"><td colspan="4">Брускетты · 5 видов, 137 шт (~40 г/чел)</td></tr>
-              <tr><td>Брускетта с салями</td><td class="c">25 × 194</td><td class="p">4 850 ₽</td></tr>
-              <tr><td>Брускетта с ростбифом</td><td class="c">25 × 255</td><td class="p">6 375 ₽</td></tr>
-              <tr><td>Брускетта с моцареллой и вялеными томатами</td><td class="c">25 × 215</td><td class="p">5 375 ₽</td></tr>
-              <tr><td>Брускетта с тартаром из лосося</td><td class="c">25 × 266</td><td class="p">6 650 ₽</td></tr>
-              <tr><td>Брускетта с овощами гриль <b style="color:var(--accent)">(+12 порций)</b></td><td class="c">37 × 218</td><td class="p">8 066 ₽</td></tr>
-              <tr class="sub-sub"><td colspan="2">Итого брускетты</td><td class="p">31 316 ₽</td></tr>
+              <tr><td>Брускетта с салями</td><td class="c">25 × 240</td><td class="p">6 000 ₽</td></tr>
+              <tr><td>Брускетта с ростбифом</td><td class="c">25 × 315</td><td class="p">7 875 ₽</td></tr>
+              <tr><td>Брускетта с моцареллой и вялеными томатами</td><td class="c">25 × 265</td><td class="p">6 625 ₽</td></tr>
+              <tr><td>Брускетта с тартаром из лосося</td><td class="c">25 × 330</td><td class="p">8 250 ₽</td></tr>
+              <tr><td>Брускетта с овощами гриль</td><td class="c">37 × 270</td><td class="p">9 990 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого брускетты</td><td class="p">38 740 ₽</td></tr>
 
               <tr class="sub-sec"><td colspan="4">Канапе · 5 видов, 125 шт (~37 г/чел)</td></tr>
-              <tr><td>Рулетики из баклажанов</td><td class="c">25 × 195</td><td class="p">4 875 ₽</td></tr>
-              <tr><td>Канапе с креветкой</td><td class="c">25 × 245</td><td class="p">6 125 ₽</td></tr>
-              <tr><td>Канапе «Камамбер» с клубникой</td><td class="c">25 × 235</td><td class="p">5 875 ₽</td></tr>
-              <tr><td>Рулетики в лаваше с ветчиной и сыром</td><td class="c">25 × 195</td><td class="p">4 875 ₽</td></tr>
-              <tr><td>Канапе «Капрезе»</td><td class="c">25 × 185</td><td class="p">4 625 ₽</td></tr>
-              <tr class="sub-sub"><td colspan="2">Итого канапе</td><td class="p">26 375 ₽</td></tr>
+              <tr><td>Рулетики из баклажанов</td><td class="c">25 × 240</td><td class="p">6 000 ₽</td></tr>
+              <tr><td>Канапе с креветкой</td><td class="c">25 × 300</td><td class="p">7 500 ₽</td></tr>
+              <tr><td>Канапе «Камамбер» с клубникой</td><td class="c">25 × 290</td><td class="p">7 250 ₽</td></tr>
+              <tr><td>Рулетики в лаваше с ветчиной и сыром</td><td class="c">25 × 240</td><td class="p">6 000 ₽</td></tr>
+              <tr><td>Канапе «Капрезе»</td><td class="c">25 × 230</td><td class="p">5 750 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого канапе</td><td class="p">32 500 ₽</td></tr>
 
               <tr class="sub-sec"><td colspan="4">Салаты · 4 вида, 80 порций (~68 г/чел)</td></tr>
-              <tr><td>«Цезарь» с курицей</td><td class="c">20 × 272</td><td class="p">5 440 ₽</td></tr>
-              <tr><td>Греческий</td><td class="c">20 × 265</td><td class="p">5 300 ₽</td></tr>
-              <tr><td>«Оливье» с курицей</td><td class="c">20 × 225</td><td class="p">4 500 ₽</td></tr>
-              <tr><td>«Нисуаз»</td><td class="c">20 × 245</td><td class="p">4 900 ₽</td></tr>
-              <tr class="sub-sub"><td colspan="2">Итого салаты</td><td class="p">20 140 ₽</td></tr>
+              <tr><td>«Цезарь» с курицей</td><td class="c">20 × 330</td><td class="p">6 600 ₽</td></tr>
+              <tr><td>Греческий</td><td class="c">20 × 325</td><td class="p">6 500 ₽</td></tr>
+              <tr><td>«Оливье» с курицей</td><td class="c">20 × 280</td><td class="p">5 600 ₽</td></tr>
+              <tr><td>«Нисуаз»</td><td class="c">20 × 300</td><td class="p">6 000 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого салаты</td><td class="p">24 700 ₽</td></tr>
 
               <tr class="sub-sec"><td colspan="4">Горячие закуски · 2 вида, 80 порций (80 г/чел)</td></tr>
-              <tr><td>Шашлычок из курицы</td><td class="c">40 × 450</td><td class="p">18 000 ₽</td></tr>
-              <tr><td>Шашлычок из свинины</td><td class="c">40 × 450</td><td class="p">18 000 ₽</td></tr>
-              <tr class="sub-sub"><td colspan="2">Итого горячие</td><td class="p">36 000 ₽</td></tr>
+              <tr><td>Шашлычок из курицы</td><td class="c">40 × 546</td><td class="p">21 840 ₽</td></tr>
+              <tr><td>Шашлычок из свинины</td><td class="c">40 × 549</td><td class="p">21 960 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого горячие</td><td class="p">43 800 ₽</td></tr>
 
               <tr class="sub-sec"><td colspan="4">Гарниры · 2 вида, 50 порций (60 г/чел)</td></tr>
-              <tr><td>Картофель «Черри» запечённый</td><td class="c">25 × 170</td><td class="p">4 250 ₽</td></tr>
-              <tr><td>Овощи-гриль с грибами</td><td class="c">25 × 275</td><td class="p">6 875 ₽</td></tr>
-              <tr class="sub-sub"><td colspan="2">Итого гарниры</td><td class="p">11 125 ₽</td></tr>
+              <tr><td>Картофель «Черри» запечённый</td><td class="c">25 × 205</td><td class="p">5 125 ₽</td></tr>
+              <tr><td>Овощи-гриль с грибами</td><td class="c">25 × 325</td><td class="p">8 125 ₽</td></tr>
+              <tr class="sub-sub"><td colspan="2">Итого гарниры</td><td class="p">13 250 ₽</td></tr>
 
-              <tr class="sub-tot"><td colspan="2">ВСЕГО меню</td><td class="p">124 956 ₽ ≈ 125 000 ₽</td></tr>
+              <tr class="sub-tot"><td colspan="2">ВСЕГО меню</td><td class="p">153 000 ₽</td></tr>
             </tbody>
           </table>
-          <div style="padding:16px 24px 20px;font-size:.82rem;color:var(--muted);font-style:italic">Оптимизация относительно исходного меню: убрано «Канапе с семгой» (−6 375 ₽, морская нота остаётся в брускетте с лососем), +12 порций брускетты с овощами-гриль (+2 616 ₽) — удобно для веганов и лёгкого выбора.</div>
         </div>
       </td></tr>
-      <tr class="rsub"><td colspan="3">Итого питание</td><td class="pr">125 000 ₽</td></tr>
+      <tr class="rsub"><td colspan="3">Итого питание</td><td class="pr">153 000 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Активации</td></tr>
-      <tr class="ri"><td class="n">9</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
+      <tr class="ri"><td class="n">8</td><td class="nm">Polaroid (100 картриджей) + альбом с пожеланиями</td><td class="cl">комплект</td><td class="pr">17 500 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого активации</td><td class="pr">17 500 ₽</td></tr>
 
       <tr class="rs"><td colspan="4">Организация</td></tr>
-      <tr class="ri"><td class="n">10</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
+      <tr class="ri"><td class="n">9</td><td class="nm">Подбор подрядчиков + контроль</td><td class="cl">агентство</td><td class="pr">40 000 ₽</td></tr>
       <tr class="rsub"><td colspan="3">Итого организация</td><td class="pr">40 000 ₽</td></tr>
 
-      <tr class="rtot"><td colspan="3">ИТОГО</td><td class="pr">551 000 ₽</td></tr>
+      <tr class="rtot"><td colspan="3">ИТОГО (за наличный расчёт)</td><td class="pr">489 000 ₽</td></tr>
     </tbody>
   </table></div>
+  <div class="pay-note rev">
+    <div><b>Наличный расчёт</b> — 489 000 ₽</div>
+    <div><b>Безналичный расчёт</b> — 537 900 ₽ <span>(+10%)</span></div>
+  </div>
   <p class="note">Смета покрывает весь вечер под ключ. Ниже — опции, которые естественно ложатся на эстетику студии и усиливают вечер.</p>
 </div></section>
 
